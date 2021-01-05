@@ -1,0 +1,20 @@
+language: ruby
+rvm:
+  - 2.5.3
+  - 2.5.7
+
+before_install: rm Gemfile.lock || true
+gemfile: Gemfile
+
+script:
+ - "bundle exec rake lint"
+ - "bundle exec rake syntax"
+ - "bundle exec rake spec SPEC_OPTS='--format documentation'"
+
+env:
+  - PUPPET_VERSION="~> 5.5.0"
+  - PUPPET_VERSION="~> 6.17.0"
+#matrix:
+#  exclude:
+#    - rvm: 2.5.3
+#      env: PUPPET_VERSION="~> 6.17.0"
