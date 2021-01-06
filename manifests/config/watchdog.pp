@@ -205,7 +205,6 @@ class pgpool::config::watchdog (
     'wd_lifecheck_dbname'           => { value => $wd_lifecheck_dbname },
     'wd_lifecheck_user'             => { value => $wd_lifecheck_user },
     'wd_lifecheck_password'         => { value => $wd_lifecheck_password },
-    'if_cmd_path'                   => { value => $if_cmd_path },
     'wd_de_escalation_command'      => { value => $wd_de_escalation_command },
     'wd_monitoring_interfaces_list' => { value => $wd_monitoring_interfaces_list },
     'wd_priority'                   => { value => $wd_priority },
